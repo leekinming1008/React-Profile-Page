@@ -52,7 +52,7 @@ const Contact = () => {
             setMessage(event.target.value);
           }}
         ></input>
-        {message.length >= 10 ? (
+        {message.length > 10 ? (
           <button type="submit">Sent the message</button>
         ) : (
           <button type="submit" disabled>
