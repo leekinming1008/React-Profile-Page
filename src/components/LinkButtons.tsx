@@ -1,17 +1,18 @@
-import "./LinkButton.css"
+import "./LinkButton.css";
 
 interface LinkButtonsProps {
-  type: string;
+  label: string;
   url: string;
 }
 
-const LinkButtons = (props: LinkButtonsProps) => {
+const LinkButtons = ({ url, label }: LinkButtonsProps) => {
   return (
     <>
-        <a target="_blank" href={props.url}>{props.type}</a>
+      <a target="_blank" href={url}>
+        {label}
+      </a>
     </>
-  )
-}
+  );
+};
 
-
-export default LinkButtons
+export default LinkButtons;
