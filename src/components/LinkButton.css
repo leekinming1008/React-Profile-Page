@@ -1,0 +1,50 @@
+a {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-weight: 600;
+	font-size: 1.5rem;
+	padding: 0.75em 1em;
+	color: blue;
+	border: 0.15em solid blue;
+	border-radius: calc(0.75em + 0.5em + 0.15em);
+	transition: 4s;
+	
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: -1.5em;
+		z-index: -1;
+		width: 200%;
+		aspect-ratio: 1;
+		border: none;
+		border-radius: 40%;
+		background-color: rgb(0 0 255 / 82%);
+		transition: 4s;
+	}
+	
+	&:before {
+		left: -80%;
+		transform: translate3d(0, 5em, 0) rotate(-340deg);
+	}
+	
+	&:after {
+		right: -80%;
+		transform: translate3d(0, 5em, 0) rotate(390deg);
+	}
+	
+	&:hover,
+	&:focus {
+		color: white;
+		
+		&:before,
+		&:after {
+			transform: none;
+			background-color: rgba(blue, 0.75);
+		}
+	}
+}
