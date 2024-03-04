@@ -6,7 +6,8 @@ const Contact = () => {
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
     console.log(
       "Your name is " +
         name +
