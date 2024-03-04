@@ -19,7 +19,7 @@ const Contact = () => {
 
   return (
     <div className="Contact">
-      <form id="contact-form">
+      <form id="contact-form" onSubmit={handleSubmit}>
         <h1>Welcome to leave a message to me :))</h1>
         <label>User Name: </label>
         <input
@@ -52,11 +52,9 @@ const Contact = () => {
           }}
         ></input>
         {message.length >= 10 ? (
-          <button type="submit" onClick={handleSubmit}>
-            Sent the message
-          </button>
+          <button type="submit">Sent the message</button>
         ) : (
-          <button type="submit" onClick={handleSubmit} disabled>
+          <button type="submit" disabled>
             Sent the message
           </button>
         )}
