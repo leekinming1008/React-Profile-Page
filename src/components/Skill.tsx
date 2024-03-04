@@ -1,6 +1,10 @@
-const Skill = ({src}) => {
+interface SkillProps {
+  src: string;
+}
+
+const Skill = (props: SkillProps) => {
   return (
-    <img className="skills" src={src}></img>           
+    <img className="skills" src={props.src}></img>           
   )
 }
 

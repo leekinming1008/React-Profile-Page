@@ -1,9 +1,14 @@
 import "./LinkButton.css"
 
-const LinkButtons = ({type, url}) => {
+interface LinkButtonsProps {
+  type: string;
+  url: string;
+}
+
+const LinkButtons = (props: LinkButtonsProps) => {
   return (
     <>
-        <a target="_blank" href={url}>{type}</a>
+        <a target="_blank" href={props.url}>{props.type}</a>
     </>
   )
 }
