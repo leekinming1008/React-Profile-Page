@@ -1,5 +1,4 @@
 import "./Contact.css";
-import LinkButtons from "./LinkButtons";
 import { useState } from "react";
 
 const Contact = () => {
@@ -62,18 +61,6 @@ const Contact = () => {
           </button>
         )}
       </form>
-      <div className="LinkButton">
-        <h1>More information about Me :))</h1>
-        <LinkButtons
-          label="LinkedIn"
-          url="https://www.linkedin.com/in/leekinming"
-        />
-        <LinkButtons label="GitHub" url="https://github.com/leekinming1008" />
-        <LinkButtons
-          label="Resume"
-          url="https://anguslee.netlify.app/assets/Angus_CV-cYGodnIY.pdf"
-        />
-      </div>
     </div>
   );
 };
