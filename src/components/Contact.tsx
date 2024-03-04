@@ -1,12 +1,12 @@
 import "./Contact.css";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
-  const handleSubmit = (event: { preventDefault: () => void }) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     console.log(
       "Your name is " +
